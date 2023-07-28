@@ -1,5 +1,6 @@
 import React from 'react';
 import s from './Header.module.css'
+import {NavLink} from "react-router-dom";
 
 function Header(props) {
     return (
@@ -32,16 +33,16 @@ function Header(props) {
                     </div>
                     <div className={s.navs}>
                         <div className={s.nav}>
-                            <a href="" className={s.navLink}>Главная</a>
+                            <NavLink to="/" className={ navData => navData.isActive ? s.active : s.navLink }>Главная</NavLink>
                         </div>
                         <div className={s.nav}>
-                            <a href="" className={s.navLink}>О нас</a>
+                            <NavLink to="/about" className={ navData => navData.isActive ? s.active : s.navLink }>О нас</NavLink>
                         </div>
                         <div className={s.nav}>
-                            <a href="" className={s.navLink}>Новости</a>
+                            <NavLink to="/news" className={ navData => navData.isActive ? s.active : s.navLink }>Новости</NavLink>
                         </div>
                         <div className={s.nav}>
-                            <a href="" className={s.navLink}>Контакты</a>
+                            <NavLink to="/contact" className={ navData => navData.isActive ? s.active : s.navLink }>Контакты</NavLink>
                         </div>
                     </div>
                 </div>
