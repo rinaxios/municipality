@@ -4,6 +4,7 @@ import Header from "./Header/Header";
 import Main from "./Main/Main";
 import About from "./About/About";
 import News from "./News/News";
+import Contact from "./Contact/Contact";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Main/>
         <About/>
         <News/>
+        <Contact/>
     </div>
   );
 }
