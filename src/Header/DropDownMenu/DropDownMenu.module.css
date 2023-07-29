@@ -1,0 +1,31 @@
+.menus {
+    position: absolute;
+    right: 0;
+    margin-top: 32px;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #dde1e6;
+    z-index: 1;
+}
+.menu{
+    margin: 15px;
+}
+.menus a{
+    text-decoration: none;
+    color: #3B4256;
+}
+.menus a:hover{
+    color: #c51f24;
+ }
+.menus::before{
+    content: '';
+    position: absolute;
+    top: -9px;
+    right: 10px;
+    width: 17px;
+    height: 17px;
+    transform: rotate(45deg);
+    background: #fff;
+    border-left: 1px solid #dde1e6;
+    border-top: 1px solid #dde1e6;
+}

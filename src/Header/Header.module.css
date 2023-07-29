@@ -19,10 +19,10 @@
 .mediaLinks{
     display: flex;
     align-items: center;
+    gap: 30px;
 }
 .mediaLinks img{
     width: 20px;
-    margin-right: 20px;
 }
 .rightSide{
 
@@ -50,13 +50,15 @@
 .logo{
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: #3B4256;
+    gap: 10px;
 }
 .logoImg{
     width: 60px;
     height: 60px;
 }
 .logoTexts{
-    margin-left: 10px;
 }
 .logoTextTop{
     font-size: 20px;
@@ -68,12 +70,18 @@
 .navs{
     display: flex;
     font-size: 16px;
+    gap: 30px;
 }
 .nav{
-    margin-left: 30px;
     padding: 31px 0;
     /*border-bottom: 2px solid transparent;*/
     position: relative;
+}
+.dropDownMenu{
+    display: none;
+}
+.nav:hover > .dropDownMenu{
+    display: block;
 }
 .navLink{
     color: #3B4256;
