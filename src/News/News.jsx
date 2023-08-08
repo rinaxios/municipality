@@ -208,7 +208,10 @@ function News(props) {
         }
     ]
 
-    let newNewsData = newsData.map(el => <NewsCard img={el.image} title={el.title}/>)
+    let newNewsData = newsData.map(el => <NewsCard img={el.image}
+                                                   title={el.title}
+                                                   published={el.published}
+                                                   time={el.time_create}/>)
 
     return (
         <div className={s.cards}>

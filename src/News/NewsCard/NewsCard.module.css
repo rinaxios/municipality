@@ -16,3 +16,10 @@
 .title{
     padding: 20px 10px;
 }
+.time{
+    display: flex;
+    justify-content: right;
+    font-size: 14px;
+    color: grey;
+    padding: 10px;
+}
