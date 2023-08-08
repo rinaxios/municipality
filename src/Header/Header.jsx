@@ -44,17 +44,17 @@ function Header(props) {
                             <NavLink to="/about" className={ navData => navData.isActive ? s.active : s.navLink }>О нас</NavLink>
                             <div className={s.dropDownMenu}>
                                 {<DropDownMenu
-                                    linkFirst="/about/history" menuFirst="История округа"
-                                    linkSecond="/about/administration" menuSecond="Администрация"
-                                    linkThird="/about/deputies" menuThird="Совет депутатов"/>}
+                                    linkFirst="/about/#history" menuFirst="История округа"
+                                    linkSecond="/about/#administration" menuSecond="Администрация"
+                                    linkThird="/about/#deputies" menuThird="Совет депутатов"/>}
                             </div>
                         </div>
                         <div className={s.nav}>
                             <NavLink to="/contact" className={ navData => navData.isActive ? s.active : s.navLink }>Контакты</NavLink>
                             <div className={s.dropDownMenu}>
                                 {<DropDownMenu
-                                    linkFirst="/contact/contact-info" menuFirst="Контактная информация"
-                                    linkSecond="/contact/feedback" menuSecond="Обратная связь"/>}
+                                    linkFirst="/contact/#contact-info" menuFirst="Контактная информация"
+                                    linkSecond="/contact/#feedback" menuSecond="Обратная связь"/>}
                             </div>
                         </div>
                     </div>
