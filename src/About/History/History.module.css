@@ -12,6 +12,14 @@
     text-indent: 50px;
     margin-bottom: 30px;
 }
+.content span{
+    cursor: pointer;
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+}
+.content span:hover{
+    border-bottom: 1px solid transparent;
+}
 .img{
 }
 .img img{
