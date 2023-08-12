@@ -7,13 +7,16 @@ import News from "./News/News";
 import Contact from "./Contact/Contact";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Footer from "./Footer/Footer";
+import BackToTopBtn from "./BackToTopBtn/BackToTopBtn";
 
 function App() {
+
     return (
         <BrowserRouter>
             <div className="App">
                 <Header/>
                 <div className="container">
+                    <BackToTopBtn/>
                     <Routes>
                         <Route path="/" element={<Main/>}/>
                         <Route path="/about" element={<About/>}/>
