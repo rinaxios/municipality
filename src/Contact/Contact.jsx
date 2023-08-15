@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './Contact.module.css'
 import ContactInfo from "./ContactInfo/ContactInfo";
+import Feedback from "./Feedback/Feedback";
 
 function Contact(props) {
     const contactData = [{
@@ -18,6 +19,7 @@ function Contact(props) {
     return (
         <div>
             {newContactData}
+            <Feedback />
         </div>
     );
 }
