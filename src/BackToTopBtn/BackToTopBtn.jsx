@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import s from './BackToTopBtn.module.css'
+import { FaArrowCircleUp } from 'react-icons/fa'
 
 function BackToTopBtn(props) {
     const [backToTopBtn, setBackToTopBtn] = useState(false);
@@ -25,8 +26,7 @@ function BackToTopBtn(props) {
         <div>
             {backToTopBtn && (
                 <div className={s.goTop} onClick={scrollUp}>
-                    <img src="https://static-00.iconduck.com/assets.00/arrow-circle-right-icon-512x512-w5ijueds.png"
-                         alt=""/>
+                         <FaArrowCircleUp className={s.goTopIcon}/>
                 </div>
             )}
         </div>

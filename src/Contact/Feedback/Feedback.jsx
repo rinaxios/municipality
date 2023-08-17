@@ -1,10 +1,11 @@
 import React from 'react';
 import s from './Feedback.module.css'
+import Title from "../../Title/Title";
 
 function Feedback(props) {
     return (
         <div>
-            <div className={s.title}>Обратная связь:</div>
+            <Title name="Обратная связь"/>
             <form className={s.feedbackForm}>
                 <div className={s.name}>
                     <label htmlFor="name">ФИО*</label><br/>

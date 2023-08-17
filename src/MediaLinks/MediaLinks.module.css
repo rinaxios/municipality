@@ -1,0 +1,20 @@
+.mediaLinks{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.mediaLinks a{
+    color: #d5d4d4;
+}
+.mediaLinksIcon:hover{
+    color: #c51f24;
+}
+
+
+@media (max-width: 768px) {
+    .mediaLinks{
+        gap: 20px;
+    }
+}

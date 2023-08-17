@@ -1,5 +1,6 @@
 import React from 'react';
 import s from "./MainContent.module.css";
+import Title from "../../Title/Title";
 
 function MainContent(props) {
     return (
@@ -8,7 +9,7 @@ function MainContent(props) {
                 <img src={props.img} alt=""/>
             </div>
             <div className={s.container}>
-                <div className={s.title}>{props.title}</div>
+                <Title name={props.title}/>
                 <div className={s.content}>{props.content}</div>
             </div>
         </div>

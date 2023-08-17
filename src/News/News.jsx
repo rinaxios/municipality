@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './News.module.css'
 import NewsCard from "./NewsCard/NewsCard";
+import Title from "../Title/Title";
 
 
 function News(props) {
@@ -214,9 +215,12 @@ function News(props) {
                                                    time={el.time_create}/>)
 
     return (
-        <div className={s.cards}>
-            {newNewsData}
-        </div>
+        <>
+            <Title name="Новости"/>
+            <div className={s.cards}>
+                {newNewsData}
+            </div>
+        </>
     );
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Footer.module.css'
 import {NavLink} from "react-router-dom";
-import DropDownMenu from "../Header/DropDownMenu/DropDownMenu";
+import MediaLinks from "../MediaLinks/MediaLinks";
 
 function Footer(props) {
 
@@ -37,12 +37,7 @@ function Footer(props) {
 
                 <div className={s.bottomSide}>
                     <div className={s.footerText}>© {year} Администрация c. Жети-Өгүз</div>
-                    <div className={s.mediaLinks}>
-                        <img src="https://static-00.iconduck.com/assets.00/telegram-icon-2048x2048-qq8ggh79.png" alt=""/>
-                        <img src="https://static-00.iconduck.com/assets.00/whatsapp-icon-512x512-kjrig5y0.png" alt=""/>
-                        <img src="https://static-00.iconduck.com/assets.00/instagram-icon-512x512-822bkylo.png" alt=""/>
-                        <img src="https://static-00.iconduck.com/assets.00/youtube-icon-512x360-wcugcfm8.png" alt=""/>
-                    </div>
+                    <MediaLinks/>
                 </div>
             </div>
         </div>

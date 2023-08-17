@@ -3,7 +3,7 @@ import s from './Administration.module.css'
 
 function Administration(props) {
     return (
-        <div className={s.administration} id="administration">
+        <div className={s.administration}>
             <div className={s.img}>
                 <img src={props.img} alt=""/>
             </div>

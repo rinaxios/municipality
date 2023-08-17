@@ -2,24 +2,23 @@ import React, {useState} from 'react';
 import s from './Header.module.css'
 import {NavLink} from "react-router-dom";
 import DropDownMenu from "./DropDownMenu/DropDownMenu";
+import MediaLinks from "../MediaLinks/MediaLinks";
+import { FaBars, FaXmark } from "react-icons/fa6";
 
-function Header(props) {
+
+function Header({menuActive, setMenuActive}) {
+    const closeMenu = () => setMenuActive(false)
 
     return (
         <div className={s.header}>
             <div className={s.navbarTop}>
                 <div className={s.container}>
-                    <div className={s.mediaLinks}>
-                        <img src="https://static-00.iconduck.com/assets.00/telegram-icon-2048x2048-qq8ggh79.png" alt=""/>
-                        <img src="https://static-00.iconduck.com/assets.00/whatsapp-icon-512x512-kjrig5y0.png" alt=""/>
-                        <img src="https://static-00.iconduck.com/assets.00/instagram-icon-512x512-822bkylo.png" alt=""/>
-                        <img src="https://static-00.iconduck.com/assets.00/youtube-icon-512x360-wcugcfm8.png" alt=""/>
-                    </div>
+                    <MediaLinks/>
                     <div className={s.rightSide}>
-                        <div className={s.translate}>
+                        <div className={s.language}>
                             <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Kyrgyzstan.svg" alt=""/>
-                            {/*<div className={s.translateText}>кыргызский</div>*/}
-                            кыргызский
+                            {/*<div className={s.languageText}>кыргызский</div>*/}
+                            KG
                         </div>
                     </div>
                 </div>
@@ -33,30 +32,33 @@ function Header(props) {
                             <div className={s.logoTextBot}>Айыл өкмотү</div>
                         </div>
                     </NavLink>
-                    <div className={s.navs}>
+                    <div className={ menuActive ? `${s.navs} ${s.navsActive}` : s.navs}>
                         <div className={s.nav}>
-                            <NavLink to="/" className={ navData => navData.isActive ? s.active : s.navLink }>Главная</NavLink>
+                            <NavLink to="/" className={ navData => navData.isActive ? s.active : s.navLink } onClick={closeMenu}>Главная</NavLink>
                         </div>
                         <div className={s.nav}>
-                            <NavLink to="/news" className={ navData => navData.isActive ? s.active : s.navLink }>Новости</NavLink>
+                            <NavLink to="/news" className={ navData => navData.isActive ? s.active : s.navLink } onClick={closeMenu}>Новости</NavLink>
                         </div>
                         <div className={s.nav}>
-                            <NavLink to="/about" className={ navData => navData.isActive ? s.active : s.navLink }>О нас</NavLink>
+                            <NavLink to="/about" className={ navData => navData.isActive ? s.active : s.navLink } onClick={closeMenu}>О нас</NavLink>
                             <div className={s.dropDownMenu}>
                                 {<DropDownMenu
                                     linkFirst="/about/#history" menuFirst="История округа"
-                                    linkSecond="/about/#administration" menuSecond="Администрация"
+                                    linkSecond="/about#administration" menuSecond="Администрация"
                                     linkThird="/about/#deputies" menuThird="Совет депутатов"/>}
                             </div>
                         </div>
                         <div className={s.nav}>
-                            <NavLink to="/contact" className={ navData => navData.isActive ? s.active : s.navLink }>Контакты</NavLink>
+                            <NavLink to="/contact" className={ navData => navData.isActive ? s.active : s.navLink } onClick={closeMenu}>Контакты</NavLink>
                             <div className={s.dropDownMenu}>
                                 {<DropDownMenu
                                     linkFirst="/contact/#contact-info" menuFirst="Контактная информация"
                                     linkSecond="/contact/#feedback" menuSecond="Обратная связь"/>}
                             </div>
                         </div>
+                    </div>
+                    <div className={s.burgerMenu} onClick={() => setMenuActive(!menuActive)}>
+                        {!menuActive ? <FaBars/> : <FaXmark/>}
                     </div>
                 </div>
             </div>

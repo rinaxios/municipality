@@ -4,39 +4,32 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 10px;
 }
 
 
 .header{
-
 }
 
 
 .navbarTop{
     background: #3b4256;
-    color: #fff;
+    color: #e0e0e0;
 }
-.mediaLinks{
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-.mediaLinks img{
-    width: 20px;
-}
-.rightSide{
 
+.rightSide{
+    margin-right: 10px;
 }
-.translate{
+.language{
     /*display: flex;*/
     /*align-items: center;*/
     padding: 17px 0;
 }
-.translate img{
+.language img{
     width: 20px;
     margin-right: 5px;
 }
-.translateText{
+.languageText{
 }
 
 
@@ -44,7 +37,7 @@
     color: #3B4256;
     font-weight: 500;
     line-height: 1;
-    background: rgba(255,255,255,0.8);
+    background: #fff;
     border-bottom: 1px solid #dde1e6;
 }
 .logo{
@@ -114,4 +107,43 @@
 .nav:hover:after{
     transform: translateX(-50%) scale(1.3);
     transition: 0.3s;
+}
+
+.burgerMenu{
+    font-size: 30px;
+    display: none;
+}
+
+@media (max-width: 750px) {
+    .burgerMenu{
+        display: block;
+        padding: 24px 0;
+    }
+    .navs{
+        /*display: none;*/
+        flex-direction: column;
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        padding-top: 75px;
+        top: 0;
+        left: 0;
+        background: #fff;
+        gap: 10px;
+        transform: translateX(-100%);
+        transition: all 0.3s;
+    }
+    .navsActive{
+        transform: translateX(0);
+    }
+    .nav{
+        padding: 10px 20px;
+    }
+    .nav:before,
+    .nav:after {
+        display: none;
+    }
+    .nav:hover > .dropDownMenu{
+        display: none;
+    }
 }

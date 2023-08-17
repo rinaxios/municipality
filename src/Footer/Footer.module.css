@@ -51,7 +51,9 @@
 .navLink:hover{
     color: #c51f24;
 }
-
+.mediaLinks{
+    gap: 80px;
+}
 
 .bottomSide{
     display: flex;
@@ -61,12 +63,29 @@
 .footerText{
     font-weight: normal;
 }
-.mediaLinks{
-    display: flex;
-    align-items: center;
-    gap: 30px;
+
+@media (max-width: 768px) {
+    .topSide{
+        flex-direction: column;
+        padding: 0 0 15px 0;
+        gap: 10px;
+    }
+    .bottomSide{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 40px;
+        padding: 40px 0 0 0;
+        margin-bottom: -20px;
+    }
 }
-.mediaLinks img{
-    width: 20px;
+@media (max-width: 380px) {
+    .navs{
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px 0 30px 0;
+    }
+    .nav{
+        padding: 0;
+    }
 }
 

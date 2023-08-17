@@ -1,5 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import s from './History.module.css'
+import Title from "../../Title/Title";
 
 const contentStyles = {
     WebkitLineClamp: 6,
@@ -33,7 +34,8 @@ function History(props) {
 
     return (
         <div className={s.history} id="history">
-            <div className={s.title}>{props.title}</div>
+
+            <Title name={props.title}/>
             <div className={s.content}>
                 <div style={isOpen ? null : contentStyles} ref={ref}>
                     {props.content}

@@ -2,6 +2,7 @@ import React from 'react';
 import s from './About.module.css'
 import History from "./History/History";
 import Administration from "./Administration/Administration";
+import Title from "../Title/Title";
 
 function About(props) {
     const historyData = [{
@@ -110,7 +111,7 @@ function About(props) {
     return (
         <div>
             {newHistoryData}
-            <div className={s.title}>Администрация муниципалитета</div>
+            <Title name="Администрация муниципалитета"/>
             {newAdminData}
         </div>
     );

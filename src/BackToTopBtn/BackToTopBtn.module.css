@@ -8,9 +8,13 @@
     border-radius: 50%;
     overflow: hidden;
 }
-.goTop img{
-    width: 70px;
-    height: 70px;
-    object-fit: cover;
-    transform: rotateZ(270deg);
+.goTopIcon{
+    font-size: 60px;
+    color: #c51f24;
+}
+
+@media (max-width: 768px) {
+    .goTopIcon{
+        font-size: 50px;
+    }
 }
